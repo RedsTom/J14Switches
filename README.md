@@ -38,6 +38,18 @@ public class Main {
 
 ## Install
 
+#### Gradle
+```groovy
+repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+}
+dependencies {
+    ...
+    implementation 'com.github.RedsTom:J14Switches:{VERSION}'
+}
+```
+
 #### Maven
 ```xml
 <repositories>
@@ -55,16 +67,4 @@ public class Main {
 	    <version>{VERSION}</version>
 	</dependency>
 </dependencies>
-```
-
-#### Gradle
-```groovy
-repositories {
-    ...
-    maven { url 'https://jitpack.io' }
-}
-dependencies {
-    ...
-    implementation 'com.github.RedsTom:J14Switches:{VERSION}'
-}
 ```
