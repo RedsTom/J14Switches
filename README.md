@@ -100,7 +100,7 @@ public class Main {
 ```scala
 import org.reddev.j14switches.{ Case, Switch };
 
-object Main extends Application {
+object Main extends App {
     var s = "Hi !"
     print(Switch(s, 
         Case.key("Hi !", () => "This is a print !"),
