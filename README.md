@@ -29,8 +29,8 @@ public class Main {
     public static void main(String[] args) {
         String s = "Hi !";
         System.out.println(Switch.newSwitch(s, 
-        new Case<>("Hi !", () -> "This is a print !"),
-        new Case<>("Not Hi !", () -> "This is another one")
+        	new Case<>("Hi !", () -> "This is a print !"),
+        	new Case<>("Not Hi !", () -> "This is another one")
         ).orElse("This is the default one !"));
     }
 }
