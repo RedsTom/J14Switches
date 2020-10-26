@@ -1,4 +1,32 @@
 plugins {
     id 'java'
+    id 'groovy'
 }
 
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    testImplementation platform("org.spockframework:spock-bom:2.0-M3-groovy-3.0")
+    testImplementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.6'
+    testImplementation "org.spockframework:spock-core"
+}
+
+build {
+    dependsOn(test)
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+group = 'org.reddev'
+version = '1.0-RC1'
