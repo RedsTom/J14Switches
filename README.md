@@ -9,7 +9,7 @@ With J14Switches, you'll be able to use a simili Java 14 for your switches.
 #### Java 14
 ```java
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String s = "Hi !";
         System.out.println(switch (s) {
             case "Hi !" -> "This is a praint !";
@@ -26,7 +26,7 @@ import org.reddev.j14switches.Case;
 import org.reddev.j14switches.Switch;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String s = "Hi !";
         System.out.println(Switch.newSwitch(s, 
         new Case<>("Hi !", () -> "This is a print !"),
