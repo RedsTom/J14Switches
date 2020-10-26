@@ -1,0 +1,4 @@
+build/
+.idea/
+J15Switches.iml
+gradlew.bat
