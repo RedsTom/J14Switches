@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args){
         String s = "Hi !";
         System.out.println(switch (s) {
-            case "Hi !" -> "This is a print !";
+            case "Hi !" -> "This is a praint !";
             case "Not Hi !" -> "This is another one";
             default -> "This is the default one !";
         });
