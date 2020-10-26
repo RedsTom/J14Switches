@@ -9,16 +9,17 @@ public class Switch {
 
     /**
      * Checks with a minimal syntax and like Java 14
+     *
      * @param baseValue Value to test
-     * @param cases Cases to test
-     * @param <T> Type of the value to return
-     * @param <U> Type of the value to test
+     * @param cases     Cases to test
+     * @param <T>       Type of the value to return
+     * @param <U>       Type of the value to test
      * @return
      */
     @SafeVarargs
-    public static <T, U> Optional<T> newSwitch(U baseValue, Case<T, U>... cases) {
+    public static <T, U> Optional<T> apply(U baseValue, Case<T, U>... cases) {
         for (Case<T, U> aCase : cases) {
-            if (baseValue == aCase.getKey()) return Optional.of(aCase.getExecutor().getResult());
+            if (aCase.test(baseValue)) return Optional.of(aCase.getExecutor().getResult());
         }
         return Optional.empty();
     }
